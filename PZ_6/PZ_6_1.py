@@ -5,13 +5,21 @@
 
 import random
 
-N = []
-p = 0
-while p < 10:
-    N.append(random.randint(0,10))
-    p += 1
+N = input("Введите размер списка: ")
+while type(N) != int:
+    try:
+        N = int(N)
+    except ValueError:
+        print("Введено неверное значение.")
+        N = input("Введите размер списка: ")
 
-print(N)
-
-for x in N:
-    print(x)
+L = [random.randint(0, 10) for i in range(N)]    # Заполнение списка случайными числами в диапозоне от 0 до 10.
+print(L)
+n = 0
+for i in range(N):    # Поиск последнего четного числа в списке.
+    if L[i] % 2 == 0:
+        n = L[i]
+for i in range(N):    # Поиск четных чисел в списке и доюавление последнего исходного нечетного числа.
+    if L[i] % 2 == 0:
+        L[i] += n
+print(L)
