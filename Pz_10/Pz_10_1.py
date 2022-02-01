@@ -13,7 +13,7 @@ x = 0
 y = 0
 a = []
 b = []
-m = []
+j = []
 f1 = open("On.txt","w", encoding="utf8")
 for i in range(10):
     a.append(random.randint(-10,10))
@@ -62,9 +62,9 @@ f3.write("\n")
 f3.write("Элементы кратные 4 первого и второго файлов: ")
 for i in c:
     if i % 4 == 0:
-        m.append(i)
+        j.append(i)
 
-for i in m:
+for i in j:
     f3.write(str(i))
     f3.write(" ")
 f3.close()
