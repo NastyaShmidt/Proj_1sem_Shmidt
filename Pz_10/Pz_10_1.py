@@ -13,7 +13,8 @@ x = 0
 y = 0
 a = []
 b = []
-f1 = open("One.txt","w", encoding="utf8")
+m = []
+f1 = open("On.txt","w", encoding="utf8")
 for i in range(10):
     a.append(random.randint(-10,10))
     f1.write(str(a[i]))
@@ -21,7 +22,7 @@ for i in range(10):
     x += 1
 f1.close()
 
-f2 = open("Two.txt","w", encoding="utf8")
+f2 = open("Tw.txt","w", encoding="utf8")
 for i in range(10):
     b.append(random.randint(-10,10))
     f2.write(str(b[i]))
@@ -29,17 +30,17 @@ for i in range(10):
     y += 1
 f2.close()
 
-f1 = open("One.txt")
+f1 = open("On.txt")
 s = f1.read()
 
-f2 = open("Two.txt")
+f2 = open("Tw.txt")
 q = f2.read()
 
 c = a + b
 g = s + q
 k = x + y
 
-f3 = open("Three.txt","w", encoding="utf8")
+f3 = open("Thr.txt","w", encoding="utf8")
 f3.write("Элементы первого и второго файлов: ")
 f3.write(str(g))
 f3.write("\n")
@@ -59,12 +60,13 @@ f3.write(str(b.index(max(b))))
 f3.write("\n")
 
 f3.write("Элементы кратные 4 первого и второго файлов: ")
-for i in a:
+for i in c:
     if i % 4 == 0:
-        a.append(i)
-for i in b:  if i % 4 == 0:
-        b.append(i)
-f3.write(" ")
+        m.append(i)
+
+for i in m:
+    f3.write(str(i))
+    f3.write(" ")
 f3.close()
 
 
