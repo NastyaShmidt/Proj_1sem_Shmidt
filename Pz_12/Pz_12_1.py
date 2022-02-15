@@ -9,14 +9,14 @@ var2 = IntVar()
 var3 = IntVar()
 var4 = IntVar()
 root.title('Регистрация')
-root.geometry('700x670')
+root.geometry('700x650')
 root.configure(bg="pink")
 label1 = Label(root, text='Регистрационная страница '
-                          'электронной библиотеки', font='Arial 17',bg="pink")
+                          'электронной библиотеки', font='Arial 15',bg="pink")
 label1.place(x=10, y=10)
 
 label2 = Label(root, text='Заполнив анкету, вы сможете пользоваться'
-                          ' электронной библиотекой', font='Arial 12',bg="pink")
+                          ' нашей электронной библиотекой', font='Arial 12',bg="pink")
 label2.place(x=10, y=60)
 
 label3 = Label(root, text='Введите регистрационное имя:', font='Arial 12', bg="pink")
@@ -59,37 +59,37 @@ check3.place(x=360, y=250)
 check4 = Checkbutton(root, text='немецкий', variable=var4, onvalue=1,
                      offvalue=0, bg="pink")
 check4.place(x=460, y=250)
-label8 = Label(root, text='Какой формат данных является для Вас предпочтительным',
+label8 = Label(root, text='Какой формат данных является для Вас предпочтительным?',
                font='Arial 12', bg="pink")
-label8.place(x=10, y=280)
+label8.place(x=10, y=300)
 listbox1 = Listbox(root, height=2, width=15, selectmode=SINGLE)
 list1 = [u"HTML", u"Plain text"]
 for i in list1:
     listbox1.insert(END, i)
-listbox1.place(x=10, y=310)
+listbox1.place(x=10, y=330)
 
 label9 = Label(root,text='Ваши любимые авторы:', font='Arial 12', bg="pink")
-label9.place(x=10, y=350)
+label9.place(x=10, y=370)
 text4 = Text(root, height=3, width=25, font='Arial 12')
-text4.place(x=10, y=375)
+text4.place(x=10, y=395)
 
 button1 = Button(root, text='OK', width=3, height=1, font='Arial 12')
-button1.place(x=10, y=440)
+button1.place(x=10, y=455)
 button2 = Button(root, text='Отменить', width=7, height=1, font='Arial 12')
-button2.place(x=60, y=440)
+button2.place(x=60, y=455)
 
 label10 = Label(root, text='Проверка PHP Лабораторные по базам данных', font='Arial 12',bg="pink")
-label10.place(x=10, y=480)
+label10.place(x=10, y=500)
 
 label11 = Label(root, text='Сегодня замечательный день.', font='Arial 10',bg="pink")
-label11.place(x=220, y=600)
+label11.place(x=220, y=590)
 
 label12 = Label(root, text='Я сделала свою первую интернет страничку.', font='Arial 10',bg="pink")
-label12.place(x=180, y=620)
+label12.place(x=180, y=610)
 
 label13 = Label(root, text='Я буду богатым и свободным человеком!', font='Arial 10', fg='blue', bg="pink")
-label13.place(x=190, y=640)
+label13.place(x=190, y=630)
 
 button3 = Button(root, text='Лабораторные по базам данных', width=70, height=1, font='Arial 10')
-button3.place(x=60, y=540)
+button3.place(x=60, y=550)
 root.mainloop()
