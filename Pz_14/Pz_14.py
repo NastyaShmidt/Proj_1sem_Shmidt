@@ -1,3 +1,6 @@
+# В исходном текстовом файле (radio_stations.txt) найти все домены
+# из URL-адресов
+
 import re
 
 p = re.compile(r"[/:]+")
